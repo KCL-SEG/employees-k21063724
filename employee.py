@@ -97,19 +97,19 @@ class Employee:
         return self.salary.get_pay() + self.commission.get_pay()
 
 
-salary = Salary(True, 4000)
-commission = Commission(_no_bonus)
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
-billie = Employee('Billie', salary, commission)
-print(billie)
+billie_salary = Salary(True, 4000)
+billie_commission = Commission(_no_bonus)
+billie = Employee('Billie', billie_salary, billie_commission)
+
 
 
 # {Charlie} works on a {contract} of {100} hours at 25/hour}.  
 # Their total pay is {2500}.
-salary = Salary(False, None, 25, 100)
-comission = Commission(_no_bonus)
-charlie = Employee('Charlie', salary, commission)
-print(charlie)
+charlie_salary = Salary(False, None, 25, 100)
+charlie_commission = Commission(_no_bonus)
+charlie = Employee('Charlie', charlie_salary, charlie_commission)
+
 
 
 # {Renee} works on a {monthly salary} of {3000} 
@@ -117,28 +117,26 @@ print(charlie)
 renee_salary = Salary(True, 3000)
 renee_commission = Commission(_contract_commission, 4, 200)
 renee = Employee('Renee', renee_salary, renee_commission)
-print(renee)
+
 
 
 # Jan works on a contract of 150 hours at 25/hour and receives a 
 # commission for 3 contract(s) at 220/contract.  Their total pay is {4410}.
-salary = Salary(False, None, 25, 150)
-commission = Commission(_contract_commission, 3, 220)
-jan = Employee('Jan', salary, commission)
-print(jan)
+jan_salary = Salary(False, None, 25, 150)
+jan_commission = Commission(_contract_commission, 3, 220)
+jan = Employee('Jan', jan_salary, jan_commission)
+
 
 
 # Robbie works on a monthly salary of 2000 and receives a bonus 
 # commission of 1500.  Their total pay is 3500.
-salary = Salary(True, 2000)
-commission = Commission(_bonus_commission, None, None, 1500)
-robbie = Employee('Robbie', salary, commission)
-print(robbie)
+robbie_salary = Salary(True, 2000)
+robbie_commission = Commission(_bonus_commission, None, None, 1500)
+robbie = Employee('Robbie', robbie_salary, robbie_commission)
 
 
 # # Ariel works on a contract of 120 hours at 30/hour and receives a bonus 
-#commission of 600.  Their total pay is 4200.
+# commission of 600.  Their total pay is 4200.
 ariel_salary = Salary(False, None, 30, 120)
 ariel_commission = Commission(_bonus_commission, None, None, 600)
 ariel = Employee('Ariel', ariel_salary, ariel_commission)
-print(ariel)
